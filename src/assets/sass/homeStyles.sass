@@ -1,0 +1,342 @@
+//====== Variables delcaration ======
+$background-color: #fff
+$shadow-color: #00000027
+$title-color: #015DB1
+$title-form-color: #37AEFE
+$subtitle-form-color: #676D72
+$link-color: #57BBFF
+$hover-phone-contact: #1b9bf0
+$shadow-input-color: #8D8A7D98
+$border-input-color: #EAEDEF
+$background-button: #015DB1
+$background-inactive-button: #C4C5F0
+$background-hover-button: #00326C
+$background-bottom: #00326C
+$brand-color: #FF6C00
+$input-text-color: #A6A6AF
+$hover-text-color: #015DB1
+
+// Import fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap')
+@font-face
+  font-family: nutmeg-bold
+  src: url(/assets/fonts/Nutmeg-Bold.ttf)
+@font-face
+  font-family: nutmeg-regular
+  src: url(/assets/fonts/nutmeg-regular.otf)
+@font-face
+  font-family: nutmeg-book
+  src: url(/assets/fonts/nutmeg-book.otf)
+
+// ====== Section Content ======
+.content
+  position: relative
+  display: flex
+  flex-direction: column
+  align-items: center
+  width: 100%
+  height: 100%
+  background: linear-gradient($background-color  70%, $background-bottom 30%) repeat scroll 0% 0%
+  padding-bottom: 25px
+  box-sizing: border-box
+  a
+    text-decoration: none
+  a.link
+    &:hover
+      color: $background-hover-button !important
+      transition: backgroundColor 0.3s ease-in-out 0s
+      cursor: pointer
+
+  // Decorations
+  .left-arrow
+    position: absolute
+    z-index: 100
+    width: 184px
+    height: 264px
+    top: 50px
+    left: -70px
+  .right-arrow
+    position: absolute
+    z-index: 100
+    width: 184px
+    height: 264px
+    top: 348px
+    right: 0px
+  .points
+    position: absolute
+    top: 550px
+  .phone-contact
+    position: fixed
+    z-index: 1000
+    top: 95px
+    right: 13%
+    width: 168px
+    height: 40px
+    background: $link-color
+    border-radius: 24px
+    &:hover
+      background: $hover-phone-contact
+    &:hover
+      cursor: pointer
+    a
+      display: flex
+      justify-content: space-evenly
+      align-items: center
+      width: 100%
+      height: 100%
+      color: #FFF
+      font-size: 17px
+      font-family: nutmeg-bold
+      text-align: center
+  // Vacunacion Card
+  .card
+    display: flex
+    align-items: center
+    flex-direction: column
+    position: relative
+    z-index: 500
+    width: 55%
+    height: 700px
+    padding-top: 20px
+    background: $background-color
+    border-radius: 12px
+    box-shadow: 0px 3px 15px $shadow-color
+    box-sizing: border-box
+    h1
+      width: 726px
+      color: $title-color
+      font-size: 36px
+      font-weight: 900
+      text-align: center
+      font-family: nutmeg-bold
+    .slider
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 746px
+      padding: 25px 0
+      .btn-slider
+        width: 16px
+        height: 28px
+        background: none
+        border: none
+        &:hover
+          cursor: pointer
+          .icon-arrow
+            #ico_left
+              fill: $link-color
+              stroke: $link-color
+      .slider-prev
+        .btn-prev
+          .icon-arrow
+            transform: scaleX(-1)
+      .slider-content
+        display: flex
+        justify-content: space-evenly
+        width: 100%
+        .slider-card
+          width: 320px
+          height: 180px
+          background: #FFF
+          box-shadow: 0 3px 8px #0000001A
+          border-radius: 25px
+          padding: 10px
+          box-sizing: border-box
+          .card-image
+          .card-title
+            color: #00326C
+            font-size: 18px
+            font-weight: 500
+            font-family: nutmeg-bold
+            opacity: 1
+          .card-title-dosis
+            color: $title-form-color
+            font-size: 18px
+            font-weight: 900
+            font-family: nutmeg-regular
+            font-style: italic
+            opacity: 1
+            .card-number
+              position: relative
+              top: -2px
+              width: 13px
+              height: 13px
+              font-style: normal
+              font-size: 12px
+              padding: 2px 7px
+              margin-right: 3px
+              color: #FDFDFD
+              background: $title-form-color
+              border-radius: 100%
+          .card-title-brand
+            font-family: nutmeg-bold
+            text-transform: uppercase
+            font-size: 20px
+            color: $brand-color
+            font-weight: 500
+          .card-title-date
+            font-family: nutmeg-regular
+            font-size: 15px
+            color: $brand-color
+            font-weight: normal
+            width: 260px
+    .horizontal-line
+      width: 681px
+      border: 1px solid #EFEFEF
+      margin: 20px 0
+    //Form Section
+    .form-content
+      h1
+        font-size: 34px
+        color: $title-form-color
+        text-align: left
+        margin-bottom: 10px
+        font-family: nutmeg-regular
+        font-weight: 200
+      h3
+        font-size: 22px
+        font-family: nutmeg-regular
+        font-weight: normal
+        line-height: 30px
+        color: $subtitle-form-color
+        width: 480px
+        a
+          color: $link-color
+      .form
+        display: flex
+        justify-content: flex-start
+        flex-wrap: wrap
+        width: 100%
+        margin-top: 30px
+        .input-control
+          position: relative
+          width: 398px
+          height: 58px
+          margin-right: 40px
+          .input-icon
+            display: flex
+            justify-content: center
+            align-items: center
+            position: absolute
+            height: 100%
+            width: 60px
+          .input-form
+            width: 100%
+            height: 100%
+            padding-left: 60px
+            box-sizing: border-box
+            font-size: 20px
+            text-align: left
+            color: $input-text-color
+            letter-spacing: 2px
+            font-family: 'Montserrat', sans-serif
+            line-height: 53px
+            font-weight: 500
+            text-transform: uppercase
+            box-shadow: 0 0 5px $shadow-input-color
+            border: .5px solid $border-input-color
+            border-radius: 4px
+            &::placeholder
+              text-transform: none
+        .btn
+          width: 231px
+          height: 60px
+          font-family: nutmeg-bold
+          font-size: 18px
+          border-radius: 16px
+          opacity: 1
+          color: #fff
+          border: medium none
+        .btn.inactive
+          background: $background-inactive-button
+        .btn-primary
+          background: $background-button
+          &:hover
+            background: $background-hover-button
+            transition: backgroundColor 0.3s ease-in-out 0s
+            cursor: pointer
+      .no-curd-content
+        margin-top: 20px
+        p
+          font-size: 18px
+          color: #676D72
+          font-family: nutmeg-book
+          font-weight: normal
+          a
+            margin-left: 5px
+            color: $title-form-color
+            &:hover
+              color: $hover-text-color
+
+//====== Basic Responsive Section ======
+// XX-Large Devices
+@media (min-width: 1400px)
+  .content
+    .points
+      left: 15.8%
+    .phone-contact
+      right: 13%
+// X-Large Devices
+@media (min-width: 1200px) and (max-width: 1390px)
+  .content
+    .points
+      left: 7%
+    .phone-contact
+      right: 1%
+    .card
+      width: 70%
+// Large Devices
+@media (min-width: 992px) and (max-width: 1199px)
+  .content
+    .card
+      width: 80%
+    .points
+      left: 0%
+    .phone-contact
+      width: 40px
+      right: 5%
+      span
+        display: none
+// Medium Devices
+@media (min-width: 768px) and (max-width: 991px)
+    .content
+      .card
+        width: 100%
+// Small Devices
+@media (min-width: 375px) and (max-width: 769px)
+  .content
+    // height: 100% !important
+    .phone-contact
+      width: 40px
+      right: 2%
+      span
+        display: none
+    .card
+      width: 100%
+      height: 100%
+      padding: 15px 15px
+      .card-title
+        font-size: 27px
+        width: 100%
+      .slider
+        width: 100%
+        .slider-content
+          .item-2
+            opacity: 0
+            display: none
+
+      .form-content
+        width: 100%
+        h1
+          font-size: 26px
+          font-weight: bold
+        h3
+          font-size: 17px
+          line-height: 20px
+          width: 310px
+          font-weight: 200
+        .input-control
+          margin-bottom: 20px
+        .no-curd-content
+          margin-left: 20px
+          width: 250px
