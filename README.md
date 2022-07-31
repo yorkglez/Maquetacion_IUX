@@ -1,6 +1,6 @@
 # MaquetacionIUX
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.3.
+Este proyecto fue creado como una prueba de maquetacion de prototipo UIX, utilizando Angular en su version 14.0.3 y Sass. 
 
 ## Development server
 
